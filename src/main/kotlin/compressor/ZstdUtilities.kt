@@ -3,7 +3,7 @@ package learn.toni.compressor
 import com.github.luben.zstd.Zstd
 
 class ZstdCompressor {
-    fun compress(data: ByteArray): ByteArray = Zstd.compress(data)
+    fun compress(data: ByteArray, compressionLevel : Int = 3): ByteArray = Zstd.compress(data, compressionLevel)
 
     fun decompress(data: ByteArray, originalSize: Int): ByteArray = Zstd.decompress(data, originalSize)
 
