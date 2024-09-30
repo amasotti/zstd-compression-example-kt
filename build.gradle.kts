@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.20"
 }
 
-group = "de.bikeleasing"
+group = "learn.toni"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -11,7 +11,8 @@ repositories {
 
 dependencies {
     implementation("com.github.luben:zstd-jni:1.5.6-6")
-    testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-runner-junit5:5.9.1")
+    testImplementation("io.kotest:kotest-assertions-core:5.9.1")
 }
 
 tasks.test {
