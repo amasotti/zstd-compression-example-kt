@@ -6,6 +6,8 @@ class ZstdCompressor {
     fun compress(data: ByteArray): ByteArray = Zstd.compress(data)
 
     fun decompress(data: ByteArray, originalSize: Int): ByteArray = Zstd.decompress(data, originalSize)
+
+    fun getCompressionRatio(originalSize: Int, compressedSize: Int): Double = compressedSize.toDouble() / originalSize
 }
 
 class StringGenerator {
